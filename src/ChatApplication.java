@@ -16,15 +16,14 @@ private static Scanner x;
     public static void main(String[] args) throws IOException, FileNotFoundException {
         // TODO code application logic here
         String username,password,room_name,message ="";
-        //String roomName = "";
+        
         String newUsername, newPassword = "";
         int count= 0;
         int usernameCount=0;
         int userCheck = 0;
         Scanner scanner=new Scanner(System.in);
         FileWriter room_writer=null;
-        //FileWriter file_writer= new FileWriter("register.txt",true);
-        //FileWriter chat_writer = new FileWriter("chatroom.txt",true);
+        
 
         while(true){
             System.out.println("Welcome to HMR's Chat App!\n");
@@ -43,7 +42,7 @@ private static Scanner x;
                     password=scanner.nextLine();
                     Scanner usernameReader = new Scanner(file1);
                     while(usernameReader.hasNextLine()){
-                        //String data1 = usernameReader.nextLine();
+                        
                         String[] userTemp = usernameReader.nextLine().split(",");
                         if(userTemp[0].equals(username)){
                             userCheck++;
@@ -274,7 +273,7 @@ private static Scanner x;
         File oldFile = new File(filePath);
         File newFile = new File(tempFile);
         String username, password = "";
-        //try{
+        
             FileWriter fw = new FileWriter(tempFile, true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
@@ -301,10 +300,7 @@ private static Scanner x;
                 
                 newFile.delete();
             }
-        //}
-           /*  catch(Exception e){
-                System.out.println("Error");
-            }*/
+        
 
         }
 }
